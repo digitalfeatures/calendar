@@ -88,7 +88,7 @@ application.subscribe(DataflowEvents.CREATE_TODO_ITEM, () => {
             </n-element>
             <n-element style="display: flex; align-items: center; margin-left: auto; width: 64px;">
                 <n-element style="width: 18px; height: 18px; margin-bottom: 2px;">
-                     <PlanetOutline />
+                    <PlanetOutline />
                 </n-element>
                 <n-text style="margin-left: 4px;" type="error">BUSY</n-text>
             </n-element>
@@ -127,4 +127,5 @@ application.subscribe(DataflowEvents.CREATE_TODO_ITEM, () => {
 </template>
 
 <style scoped>
+
 </style>

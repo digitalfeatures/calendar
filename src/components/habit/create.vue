@@ -78,7 +78,7 @@ const options = [
 </script>
 
 <template>
-    <n-drawer v-model:show="state" :width="630">
+    <n-drawer v-model:show="state" :width="720">
         <n-drawer-content class="todo-drawer-content">
             <template #header>
                 <n-element tag="div" class="todo-header">
@@ -108,7 +108,6 @@ const options = [
 
                 <n-date-picker type="daterange">
                     <template #footer>
-                        extra footer
                     </template>
                 </n-date-picker>
 

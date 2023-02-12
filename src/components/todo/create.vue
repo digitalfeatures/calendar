@@ -77,7 +77,7 @@ function handleCreateTodoItem() {
 </script>
 
 <template>
-    <n-drawer v-model:show="state" :width="630">
+    <n-drawer v-model:show="state" :width="720">
         <n-drawer-content class="todo-drawer-content">
             <template #header>
                 <n-element tag="div" class="todo-header">
@@ -90,14 +90,6 @@ function handleCreateTodoItem() {
                 </n-element>
             </template>
 
-            <n-element style="margin-bottom: 16px;">
-                <!--  四象限法解析分析法 -->
-                <n-element style="margin-bottom: 8px;">
-                    <n-text>The importance level</n-text>
-                </n-element>
-                <SlideRadio :options="LevelOptions" v-model:value="level" />
-            </n-element>
-
             <n-element tag="div" class="todo-date-picker">
                 <n-text strong style="margin-bottom: 2px;">DEADLINE</n-text>
                 <n-date-picker v-model:value="deadline" type="date" clearable>
@@ -105,6 +97,14 @@ function handleCreateTodoItem() {
                         <n-icon :size="16" :component="TrendingUpOutline" />
                     </template>
                 </n-date-picker>
+            </n-element>
+
+            <n-element style="margin-bottom: 16px;">
+                <!--  四象限法解析分析法 -->
+                <n-element style="margin-bottom: 8px;">
+                    <n-text>The importance level</n-text>
+                </n-element>
+                <SlideRadio :options="LevelOptions" v-model:value="level" />
             </n-element>
 
             <n-element style="margin-bottom: 16px;">
@@ -118,7 +118,7 @@ function handleCreateTodoItem() {
                 <n-element style="margin-bottom: 8px;">
                     <n-text>The Todo Description</n-text>
                 </n-element>
-                <n-input v-model:value="content" type="textarea" :autosize="{ minRows: 10, maxRows: 10 }"
+                <n-input v-model:value="content" type="textarea" :autosize="{ minRows: 5, maxRows: 5 }"
                     placeholder="">
                 </n-input>
             </n-element>
