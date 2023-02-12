@@ -48,7 +48,7 @@
 }
 
 .screen-header {
-    box-sizing: border-box;
+    cursor: pointer;
 
     position: relative;
 
@@ -60,6 +60,7 @@
 
     height: 54px;
     min-height: 54px;
+
 }
 
 .screen-header>.screen-header-center-side {
@@ -68,6 +69,8 @@
     left: 50%;
 
     transform: translateX(-50%);
+
+    user-select: none;
 }
 
 .screen-header>.screen-header-right-side {
