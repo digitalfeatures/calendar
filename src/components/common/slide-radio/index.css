@@ -1,0 +1,37 @@
+.slide-radio {
+    position: relative;
+
+    border: 1px solid var(--border-color);
+
+    display: flex;
+    /* border: 1px solid #e0e0e5; */
+    padding: 4px;
+
+    border-radius: 3px;
+
+    transition: border .3s var(--n-bezier);
+}
+
+.slide-radio:hover {
+    border: 1px solid var(--primary-color-hover);
+}
+
+.slide-radio-item {
+    cursor: pointer;
+
+    width: 25%;
+    text-align: center;
+}
+
+.slide {
+    position: absolute;
+    top: 2px;
+
+    width: 25%;
+    height: calc(100% - 4px);
+    box-shadow: var(--box-shadow-2);
+
+    border-radius: 2px;
+
+    transition: left .3s var(--n-bezier);
+}

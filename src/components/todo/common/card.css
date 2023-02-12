@@ -1,0 +1,42 @@
+.todo-item-card {
+    margin-bottom: 16px;
+}
+
+.todo-item-card-header {
+    margin-bottom: 16px;
+}
+
+.todo-item-card-header>.level {
+    width: 128px;
+    height: 12px;
+
+    border-radius: 2px;
+
+}
+
+.todo-item-card-action {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-item-card-tag-group>.n-tag+.n-tag {
+    margin-left: 8px;
+}
+
+.todo-item-card-tag-group>.n-tag {
+    padding: 2px 16px !important;
+}
+
+.todo-item-card-tag-group {
+    display: flex;
+
+    align-items: center;
+}
+
+.todo-item-card-tag-group> .n-icon {
+    font-size: 18px;
+
+    margin-left: 8px;
+}
