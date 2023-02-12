@@ -3,6 +3,8 @@ import dayjs from 'dayjs';
 
 import _ from 'lodash';
 
+import { ref, watch } from 'vue';
+
 import {
     CalendarOutline,
     Create,
@@ -18,7 +20,16 @@ interface Daily {
     date: Date
 }
 
-defineProps<Daily>()
+const props = defineProps<Daily>()
+
+const state = ref<boolean>(false)
+function handleClose() {
+    state.value = false
+}
+
+watch(() => props.isShown, (n) => {
+    state.value = n;
+});
 
 const application = TODO.getApplication();
 
@@ -94,11 +105,10 @@ function getDayName(date: Date) {
         }
     }
 }
-
 </script>
 
 <template>
-    <n-drawer v-model:show="isShown" :width="720">
+    <n-drawer v-model:show="state" :width="720" :on-update:show="handleClose">
         <n-drawer-content class="todo-list">
             <template #header>
                 <n-element tag="div" class="todo-list-header">
