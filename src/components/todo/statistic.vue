@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash';
 
-import { Todo, TodoLevel } from '../../models/todo'
+import { TodoContainer, TodoLevel } from '../../models/todo'
 
 import TODO, { DataflowEvents } from '../../modules/application/todo';
 
@@ -24,7 +24,7 @@ const total = ref<number>(0)
 const chart = ref<Object[]>([])
 
 function handleGetTotal() {
-    const _todo = application?.getContainer() as Todo;
+    const _todo = application?.getContainer() as TodoContainer;
 
     const items = _todo.selectAllTodoItemsByDay(props.date)
 

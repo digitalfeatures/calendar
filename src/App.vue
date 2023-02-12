@@ -23,9 +23,6 @@ import Runtime from './modules/runtime'
 import Todo , { ComponentEvents as TodoComponentEvents  } from './modules/application/todo'
 import Habit, { ComponentEvents as HabitComponentEvents } from './modules/application/habit'
 
-//@ts-ignore
-window.__runtime = Runtime
-
 const config = Runtime.getConfig();
 
 const theme = ref(config.isDarkMode ? darkTheme : lightTheme)
