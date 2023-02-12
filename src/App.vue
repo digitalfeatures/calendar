@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import './App.css'
 
+import Header from './components/header/header.vue';
 import Calendar from './components/calendar/calendar.vue'
 import Toolbar from './components/toolbar/toolbar.vue'
 import Screensaver from './components/screensaver/screensaver.vue'
@@ -20,7 +21,7 @@ import {
 
 import Runtime from './modules/runtime'
 
-import Todo , { ComponentEvents as TodoComponentEvents  } from './modules/application/todo'
+import Todo, { ComponentEvents as TodoComponentEvents } from './modules/application/todo'
 import Habit, { ComponentEvents as HabitComponentEvents } from './modules/application/habit'
 
 const config = Runtime.getConfig();
@@ -90,6 +91,8 @@ function handleDayClick(event: any) {
 
 <template>
   <n-config-provider v-model:theme="theme">
+    <Header :is-dark="isDarkMode" />
+
     <Screensaver :is-dark="isDarkMode" :is-show="isOpenScreen" @show="handleOpenScreen" />
 
     <Calendar :is-dark="isDarkMode" @onDayClick="handleDayClick" />
